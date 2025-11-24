@@ -29,6 +29,12 @@ function renderPosts(postsToRender) {
 
 renderPosts(posts);
 
+const scrolltop = document.getElementById('scrolltop');
+    scrolltop.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0
+        });
+    });
 
 searchBar.addEventListener('keyup', (e) => {
     const term = e.target.value.toLowerCase().trim();
@@ -39,4 +45,5 @@ searchBar.addEventListener('keyup', (e) => {
     );
 
     renderPosts(filtered);
+
 });
