@@ -31,10 +31,12 @@ renderPosts(posts);
 
 
 searchBar.addEventListener('keyup', (e) => {
-    const term = e.target.value;
+    const term = e.target.value.toLowerCase().trim();
     
-    const filtered = posts.filter(post => post.title === term);
+    const filtered = posts.filter(post => 
+        post.title.toLowerCase().includes(term) ||
+        post.content.toLowerCase().includes(term)
+    );
+
     renderPosts(filtered);
 });
-
-
