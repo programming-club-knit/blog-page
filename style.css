@@ -22,9 +22,9 @@ input {
 
 #blog-container {
     display: grid;
-    grid-template-columns: repeat(3, 500px);
+    grid-template-columns: repeat(2, 500px);
     gap: 20px;
-    padding: 2rem;
+    padding: 4rem;
     justify-content: center;
 }
 
